@@ -237,10 +237,10 @@ body {
 
 .hero-content {
     position: relative;
-    z-index: 1;  /* Keeps the text content above the video */
-    color: black; /* Text color */
-    text-align: center; /* Centers the content */
-    padding: 20px;  /* Adds some padding */
+    z-index: 1;  
+    color: black;
+    text-align: center; 
+    padding: 20px; 
 }
 
 .hero h1 {
@@ -288,10 +288,10 @@ body {
 /* Content: Flexbox for side-by-side layout */
 .content {
     display: flex;
-    align-items: center; /* Vertically align the text and image */
-    justify-content: space-between; /* Space between the text and the image */
+    align-items: center; 
+    justify-content: space-between; 
     padding: 20px;
-    border-radius: 10px; /* Optional rounded corners */
+    border-radius: 10px;
 } 
 
 /* Text Section */
@@ -315,8 +315,8 @@ body {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    object-fit: cover; /* Ensures the image covers the space properly */
-    max-width: 500px; /* Optional: Limit image size */
+    object-fit: cover; 
+    max-width: 500px; 
 }
 
 /* Responsive Design for Smaller Screens */

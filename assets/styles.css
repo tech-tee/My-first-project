@@ -1,3 +1,7 @@
+h1{
+    font-size: 60px;
+    font-family: Roboto, sans-serif;
+}
 .topheader{
     background-image: linear-gradient(47deg, rgb(242, 57, 57) 15%, rgb(3, 45, 171) 57%);
     padding: 0;
@@ -141,7 +145,10 @@ body{
 }
 
 .nav ul li a:hover {
-    color: #007bff;
+    color: red;
+    position: relative;
+    border-top: 2px solid red;
+    padding-top: 5px;
 }
 
 .container{
@@ -163,9 +170,6 @@ body{
    
 }
 
-.nav ul li a:hover {
-    color: #007bff;
-  }
 
 .searchbutton{
     width: 15px;
@@ -181,9 +185,194 @@ body{
     border: none;
     margin-top: -20px;
 }
+
+.cta-button:hover{
+    background-color: black;
+}
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+
+}
+
+.hero-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cta-button2 {
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 20px 40px;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #30C6DEB8 0%, #3AA2F0C9 100%);
+}
+
+.cta-button2:hover {
+    transform: scale(0.95);
+}
+
+.arrow{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.body1{
+    background: url('https://speedlinkng.com/wp-content/uploads/2022/09/white-background.jpg');
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 40px;
+    border-radius: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.text-section{
+    flex: 1;
+    max-width: 60%;
+    margin-left: 120px;
+    font-family: 'Open Sans', sans-serif;
+}
+.first-body1{
+    color: #EC1C24;
+}
+.otherbody1{
+    color: #020D39;
+}
+.last-body1{
+    color: #4B4F58;
+}
+.paper{
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.button-text{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+}
+.cret-button{
+    background-color: #B41E24;
+    padding: 12px 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: none;
+}
+.cret-button:hover{
+    background-color: blue;
+    transition: background-color 0.3s ease-in-out;
+    
+}
+.image-section{
+    flex: 1;
+    max-width: 35%;
+    height: auto;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-color: #EC7D81;
+    border-radius: 40px 10px 100px 10px;
+    box-sizing: border-box;
+    margin-right: 120px;
+}
+
+.certification {
+    background-color: #00274d; 
+    color: white; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    padding: 40px 20px;
+    border-radius: 8px; 
+    position: relative; 
+    max-width: 1000px; 
+    margin: 40px auto; 
+}
+.cert-img {
+    background-color: white; 
+    padding: 10px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    max-width: 120px;
+    margin-right: 20px;
+}
+.certification-text {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    max-width: 700px;
+    text-align: left;
+    gap: 15px;
+}
+
+.certification-text h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.certification-text p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5; 
+}
+
+.button1 {
+    background-color: #ff0000;
+    color: white; 
+    border: none; 
+    padding: 12px 30px; 
+    border-radius: 5px;
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    align-self: flex-start;
+    transition: background-color 0.3s ease; 
+}
+
+.button1:hover {
+    background-color: #cc0000; 
+}
+
+.button1-text {
+    text-align: center; 
+    line-height: 1.2; 
 }
