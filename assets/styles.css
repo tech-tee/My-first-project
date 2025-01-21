@@ -16,16 +16,19 @@ body {
     margin: 0;
     box-sizing: border-box;
     width: 100vw;
+    padding-bottom: 10px;
 }
 
 .social-media {
     fill: #ffffff;
-    margin-right: 20px;
+    margin-right: 25px;
+    padding-top: 0.5rem;
+    align-items: center;
 }
 
 .social-media img {
     background-color: #ffffff1c;
-    width: 25px;
+    width: 14px;
     padding: 5px 10px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
@@ -37,7 +40,7 @@ body {
 
 .phone-button {
     vertical-align: middle;
-    width: 15px;
+    width: 12px;
     margin-right: 5px;
     margin-left: 5px;
 }
@@ -49,16 +52,16 @@ body {
 .phnum {
     color: white;
     margin-right: 20px;
-    font-size: 13px;
 }
 
 .contact {
     text-decoration: none;
     background-color: #ffffff1c;
-    padding: 5px 10px;
-    width: 20px;
+    padding: 5px 0.2rem;
+    width: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    font-size: 12px;
 }
 
 .contact:hover {
@@ -67,17 +70,18 @@ body {
 
 .email-button {
     vertical-align: bottom;
-    width: 20px;
+    width: 15px;
     margin-right: 10px;
 }
 
 .email {
     text-decoration: none;
+    font-size: 12px;
     text-align: left;
     color: white;
     background-color: #ffffff1c;
-    padding: 5px 10px;
-    width: 20px;
+    padding: 5px 0.2rem;
+    width: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -85,6 +89,7 @@ body {
 .email:hover {
     background-color: #218838;
 }
+
 
 .container {
     display: flex;
@@ -106,9 +111,13 @@ body {
     }
 }
 
+.nav{
+    padding-top: 20px;
+}
+
 .nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #0A2863;
     padding: 10px;
     transition: color 0.3s ease;
 }
@@ -122,11 +131,12 @@ body {
 
 .nav ul {
     text-decoration: none;
-    color: #333;
+    color: blue;
     padding: 10px;
     list-style-type: none;
     display: flex;
     gap: 10px;
+    flex-direction: row;
 }
 
 .searchbutton {
@@ -152,7 +162,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px;
+    padding: 10px 100px;
 }
 
 .hamburger {
@@ -165,48 +175,100 @@ nav {
 }
 
 .hamburger .bar {
-    background-color: #333;
+    background-color: #0A2863;  
     height: 5px;
     width: 100%;
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
+.menu-toggle {
+    display: none;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 30px;
+    text-align: right;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: auto;
+    display: none;
+}
+
+.main-header.logo{
+    display: flex;
+    align-items: center;
+}
+
+.main-header .logo img{
+    width: 200px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+.main-header .logo .logo-text{
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-left: 10px;
+}
+
 @media screen and (max-width: 768px) {
     .nav ul {
-        display: none;
+        display: none;  
         position: fixed;
         top: 0;
-        left: 0;
-        width: 250px;
+        right: 0;  
+        width: 600px;
         height: 100%;
-        background-color: #333;
-        padding-top: 20px;
+        background-color: white;  
+        margin: 0;
         z-index: 9999;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-        transform: translateX(-100%);
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);  
+        transform: translateX(100%);  
         transition: transform 0.3s ease;
     }
 
+    .nav ul li:first-child{
+        margin-bottom: 20px;
+    }
+
     .menu-toggle:checked + .hamburger + .nav ul {
-        transform: translateX(0);
+        transform: translateX(0); 
+        display: block; 
+        flex-direction: column;
+    }
+
+    .menu-toggle:checked + .hamburger + .nav ul .close-button{
+        display: block;
     }
 
     .nav ul li {
         margin: 20px 0;
-        text-align: center;
+        text-align: left;
     }
 
     .nav ul li a {
-        color: white;
+        color: black; 
         font-size: 18px;
+    }
+
+    .nav ul li a:hover {
+        color: blue;
+        position: relative;
+        border-top: none;
+        padding-top: 5px;
     }
 
     .cta-button {
         display: block;
         width: 100%;
         text-align: center;
-        background-color: #218838;
+        background-color: red;
         padding: 10px;
         margin-top: 20px;
     }
@@ -226,7 +288,7 @@ nav {
     }
 
     .menu-toggle:checked + .hamburger .bar:nth-child(2) {
-        opacity: 0;
+        opacity: 0; 
     }
 
     .menu-toggle:checked + .hamburger .bar:nth-child(3) {
@@ -234,11 +296,30 @@ nav {
         position: relative;
         bottom: 10px;
     }
+
+    .close-button {
+        display: block;
+        align-items: right;
+    }
+
+    .main-header .logo img {
+        width: 120px; 
+    }
+
+    .main-header .logo .logo-text{
+        display: block;
+        font-size: 18px;
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .nav ul li a {
         font-size: 16px;
+    }
+
+    .main-header .logo img {
+        width: 120px; 
     }
 }
 
@@ -250,6 +331,17 @@ nav {
 }
 
 .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-image{
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -280,39 +372,45 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
+    background: rgba(0, 0, 255, 0.4); 
     z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
-    .hero {
-      height: 70vh;
+   .hero-video{
+    display: none;
+   }
+   .hero-image{
+    display: block;
+   }
+}
+
+@media screen and (max-width){
+    .hero{
+        height: 20vh;
     }
-    .hero-content {
-      padding: 1rem;
+    .hero-content{
+        padding: 1rem;
     }
-    .hero-content h1 {
-      font-size: 1.6rem; 
+    .hero content h1{
+        font-size: 0.5rem;
     }
-    .hero-content p.main {
-      font-size: 0.9rem; 
+    .cta-button2{
+        padding: 0.75rem 1rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.7rem;
     }
-    .cta-button2 {
-      padding: 0.75rem 1rem;
-      font-size: 0.7rem;
-      margin-bottom: 0.7rem; 
-    }
-  }
+}
   
   @media screen and (max-width: 480px) {
     .hero {
       height: 60vh;
     }
     .hero-content h1 {
-      font-size: 1.4rem;
+      font-size: 0.5rem;
     }
     .hero-content p.main {
-      font-size: 0.9rem;
+      font-size: 0.5rem;
     }
     .cta-button2 {
       font-size: 0.5rem;
