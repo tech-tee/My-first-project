@@ -323,6 +323,8 @@ nav {
     }
 }
 
+
+
 .hero {
     position: relative;
     width: 100%;
@@ -432,6 +434,7 @@ nav {
     transition: background-color 0.3s ease;
     background-color: transparent;
     background-image: linear-gradient(90deg, #30C6DEB8 0%, #3AA2F0C9 100%);
+    border: none;
 }
 
 .cta-button2:hover {
@@ -445,54 +448,99 @@ nav {
 }
 
 .body1 {
-    background: url('https://speedlinkng.com/wp-content/uploads/2022/09/white-background.jpg');
+    position: relative; /* Needed for positioning the pseudo-element */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 40px;
     border-radius: 10px;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
+    overflow: hidden;
+    background: none; /* Remove background from body1 */
+    max-width: 100%;
+    max-height: 40%;
+    
+}
+
+.body1::before{
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://speedlinkng.com/wp-content/uploads/2022/09/white-background.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(0.1rem); 
+    z-index: -1; 
 }
 
 .text-section {
     flex: 1;
-    max-width: 60%;
-    margin-left: 120px;
+    max-width: 50%;
+    margin-left: 1.5cm;
     font-family: 'Open Sans', sans-serif;
+    position: relative;
+    z-index: 1;
 }
 
-.first-body1 {
+.text-section h6 {
     color: #EC1C24;
+    padding-left: 10px;
 }
 
-.otherbody1 {
+.text-section h1 {
     color: #020D39;
+    padding-left: 10px;
+    line-height: 1.1;
+    word-wrap: break-word;
+    font-size: 51.5px;
+    margin-top: 30px;
 }
 
-.last-body1 {
+.text-section p {
     color: #4B4F58;
+    padding-left: 10px;
+    padding-right: -1000px;
+    margin-right: -80px;
+    font-size: 17px;
+    font-family: "Open sans",sans-serif;
+    line-height: 1.6;
 }
 
-.paper {
+.text-section img{
     width: 16px;
     height: 16px;
     vertical-align: middle;
+    padding-right: 10px;
 }
 
 .button-text {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .cret-button {
     background-color: #B41E24;
-    padding: 12px 30px;
     border-radius: 5px;
     box-sizing: border-box;
     overflow: hidden;
     border: none;
+    padding-left: 17px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    font-size: 16px;
 }
 
 .cret-button:hover {
@@ -502,8 +550,10 @@ nav {
 
 .image-section {
     flex: 1;
-    max-width: 35%;
-    height: auto;
+    width: 250px;
+    max-width: 50%;
+    margin-left: 50px;
+    height: 350px;
     border: none;
     display: inline-block;
     vertical-align: middle;
@@ -515,8 +565,47 @@ nav {
     margin-right: 120px;
 }
 
+@media (max-width: 768px) {
+    .body1 {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: stretch;
+    }
+
+    .text-section, .image-section {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .image-section {
+        order: -1; /* Move the image section above the text section */
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 20px; /* Space between image and text on smaller screens */
+    }
+
+    .text-section{
+        margin-left: -20px;
+    }
+
+    .text-section h1 {
+        font-size: 36px; 
+        
+    }
+
+    .text-section p {
+        font-size: 15.014px; /* Adjust font size for readability */
+    }
+
+    .cret-button{
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+}
+
 .certification {
-    background-color: #02176D;
+    background-image: url('https://speedlinkng.com/wp-content/uploads/2022/09/white-background.jpg'); 
+    background-size: cover; 
+    background-position: center;
     color: white;
     display: flex;
     align-items: center;
@@ -525,8 +614,21 @@ nav {
     position: relative;
     width: 80%;
     height: 120px;
-    margin: 0 auto;
+    margin-top: 40px;
+    margin-left: 100px;
     justify-content: space-evenly;
+}
+
+.certification::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(2, 23, 109, 0.9); /* Solid color overlay */
+    border-radius: 8px;
+    z-index: 0; /* Overlay should be behind the content */
 }
 
 .cert-img {
@@ -536,6 +638,8 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 150px;
     margin-right: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .certification-text {
@@ -546,6 +650,7 @@ nav {
     max-width: 700px;
     text-align: left;
     gap: 15px;
+    z-index: 2;
 }
 
 .certification-text h3 {
@@ -587,84 +692,151 @@ nav {
     line-height: 1.2;
 }
 
+/* .ser-list {
+    display: grid;
+    gap: 40px;
+} */
+
 .services {
-    background-color: #EFEAEAB5;
+    background: url('https://speedlinkng.com/wp-content/uploads/2022/09/background-1.png');
     color: #4B4F58;
-    padding: 50px 15px 50px 15px;
+    padding-left: 100px;
+    padding-right: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.ser-text {
-    color: #4B4F58;
-}
-
-.services h2 {
+.ser-txt h2 {
     color: #020d39;
     font-family: 'Roboto', sans-serif;
 }
 
-.services p {
+.ser-txt p {
     color: #000;
 }
 
+.ser-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .ser-list {
-    display: grid;
-    gap: 40px;
+    flex: 1;
 }
 
 .ser-list ul {
+    list-style: none;
+    padding: 0;
     color: #222121;
     text-decoration: none;
     list-style-type: none;
-    padding: 0;
 }
 
 .ser-list ul li {
+    padding: 15px 30px;
+    border: 2px solid #f1bcd9;
+    background-color: white;
+    border-radius: 0 30px 30px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 15px 30px;
-    border: 2px solid #f1bcd9;
-    background-color: white;
     width: 250px;
     height: 20px;
-    border-radius: 0 30px 30px 0;
-    transition: all 0.3s ease;
-    cursor: pointer;
+}
+
+.ser-list ul li:hover {
+    background-color: #be1219;
+    color: white;
+    border: none;
 }
 
 .ser-list ul li a {
     text-decoration: none;
     color: #333;
-    text-align: center;
-    display: block;
-    width: 100%;
-    height: 100%;
     font-size: 16px;
     font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: center;
     line-height: 30px;
     transition: color 0.3s ease;
-}
-
-.ser-list ul li:hover {
-    background-color: #be1219;
-    border: none;
 }
 
 .ser-list ul li:hover a {
     color: white;
 }
 
-.ser-list ul li:nth-child(1):hover {
-    background-image: url('path-to-your-image1.jpg');
-    background-size: cover;
-    background-position: center;
+.ser-images {
+    position: relative;
+    width: 60%; /* Adjust width to fit the layout */
+    height: 100%; /* Adjust based on content */
 }
 
-.ser-list ul li:nth-child(2):hover {
-    background-image: url('path-to-your-image2.jpg');
-    background-size: cover;
-    background-position: center;
+.ser-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://speedlinkng.com/wp-content/uploads/2022/09/pexels-nemuel-sereti-6424583.jpg') center/cover no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.ser-image .overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, red, purple, blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.ser-image h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ser-image ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ser-image ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.ser-image ul li .chevron {
+    margin-right: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Show IT Services on hover */
+.hover-item[data-service="itservices"]:hover ~ .ser-images #itservices {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ind{
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .ind-images {
@@ -684,12 +856,15 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: calc(20% - 20px);
-    height: 180px;
+    width: calc(100% - 50px);
+    height: 200px;
+    background-color: white;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 170px;
 }
 
 .ind-images img {
-    width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 8px;
@@ -698,8 +873,16 @@ nav {
 .ind-images p {
     margin-top: 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+    color: #4B4F58;
 }
+
+ .img1,  .img2,  .img3, 
+ .img4,  .img5, .img6, 
+ .img7,  .img8,  .img9,  .img10 {
+    
+ }
 
 @media (max-width: 768px) {
     h1 {
@@ -752,6 +935,12 @@ nav {
         width: 50px;
         height: 50px;
     }
+}
+
+
+
+.image-all{
+    width: 10px;
 }
 
 
