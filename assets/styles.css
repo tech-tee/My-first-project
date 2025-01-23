@@ -937,13 +937,117 @@ nav {
     }
 }
 
-
-
-.image-all{
-    width: 10px;
-}
-
-
+/* Styling the entire section with gradient background */
+.products {
+    background: linear-gradient(180deg, #0627AD 0%, #CD2C32 100%);
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* General styling for the product text */
+  .product-text h6 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .product-text span {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .product-text p {
+    font-size: 16px;
+    color: #ddd; /* Adjusted for readability */
+  }
+  
+  /* Styling the image rows */
+/* Styling the image rows */
+.prd-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; /* Adds consistent spacing between items */
+    justify-content: center;
+  }
+  
+  /* Ensure all main images are consistent in size */
+  .img-1 {
+    width: 300px; /* Make the image responsive */
+    max-width: 400px; /* Set a uniform max width */
+    height: 350px; /* Force a uniform height */
+    object-fit: cover; /* Ensures images maintain aspect ratio while filling the space */
+    border-radius: 8px;
+    background-color: white; /* White background for contrast */
+    padding: 10px; /* Space around the image inside its white background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Adds spacing below each image */
+  }
+  
+  
+  /* Styling for the div with h5 */
+  .prd-images div {
+    margin-top: 10px; /* Adds space between the image and the h5 div */
+    text-align: center;
+    margin-top: 0px;
+    padding-top: -1000px;
+    position: relative;
+  }
+  
+  /* Styling for h5 (white background with rounded edges) */
+  .prd-images h5 {
+    position: absolute;
+    bottom: -10px; /* Adjust this value to move the text higher or lower */
+    left: 50%; /* Moves the text slightly inward from the left edge */
+    transform: translateX(-50%); /* Centers the text horizontally */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for text */
+    color: #333; /* Darker text for contrast */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    padding-bottom: 30px;
+  }
+  
+  /* Styling for small icons in h5 */
+  .prd-images h5 img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Button placed at the very bottom of the section */
+  .prd-button {
+    margin-top: 40px; /* Adds space before the button */
+    text-align: center; /* Centers the button */
+    width: 100%; /* Ensures the button spans the full width if needed */
+  }
+  
+  .prd-button .buttonprd {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .prd-button .buttonprd img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .prd-button .buttonprd:hover {
+    background-color: #0056b3;
+  }
+  
 
 
 
