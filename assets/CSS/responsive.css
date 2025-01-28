@@ -1,3 +1,16 @@
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px; 
+        padding: 0; 
+        margin: 0; 
+        background-color: #f0f0f0; 
+      }
+    
+      section{
+        width: 100%;
+      }
+}
+
 @media screen and (max-width: 768px) {
     .topheader {
         display: none; 
