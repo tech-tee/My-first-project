@@ -1,16 +1,3 @@
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 14px; 
-        padding: 0; 
-        margin: 0; 
-        background-color: #f0f0f0; 
-      }
-    
-      section{
-        width: 100%;
-      }
-}
-
 @media screen and (max-width: 768px) {
     .topheader {
         display: none; 
@@ -138,46 +125,44 @@
 
 
 @media screen and (max-width: 768px) {
-    .hero-video{
-     display: none;
-    }
-    .hero-image{
-     display: block;
-    }
+  
  }
  
- @media screen and (max-width){
-     .hero{
-         height: 20vh;
-     }
-     .hero-content{
-         padding: 1rem;
-     }
-     .hero content h1{
-         font-size: 0.5rem;
-     }
-     .cta-button2{
-         padding: 0.75rem 1rem;
-         font-size: 0.7rem;
-         margin-bottom: 0.7rem;
-     }
- }
+ @media (max-width: 1024px) { 
+    .hero {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) { 
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .hero {
+        width: 100%;
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px; 
+    }
+
+    .hero-content p {
+        font-size: 15.504px; 
+    }
+
+    .hero-video{
+        display: none;
+       }
+       .hero-image{
+        display: block;
+        object-fit: cover;
+       }
+}
    
-   @media screen and (max-width: 480px) {
-     .hero {
-       height: 60vh;
-     }
-     .hero-content h1 {
-       font-size: 0.5rem;
-     }
-     .hero-content p.main {
-       font-size: 0.5rem;
-     }
-     .cta-button2 {
-       font-size: 0.5rem;
-       padding: 0.5rem 0.65rem;
-     }
-   }
+
 
    @media screen and (max-width: 768px) {
     .prd-images {
