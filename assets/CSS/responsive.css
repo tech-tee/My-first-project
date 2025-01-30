@@ -162,6 +162,100 @@
        }
 }
    
+@media screen and (max-width: 768px) {
+    .certification {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 40px 20px;
+        width: 90% !important;
+        height: auto !important;
+        margin: 20px auto;
+        justify-content: center !important;
+    }
+
+    .cert-img {
+        max-width: 120px !important;
+        margin-right: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .certification-text {
+        text-align: center !important;
+        max-width: 90%;
+    }
+
+    .button1 {
+        width: 90% !important; /* Keep the button width */
+        padding: 12px 0 !important;
+        font-size: 18px !important;
+        margin-top: 20px !important;
+        margin: 0 auto; /* Center the button */
+        display: block; /* Make the button a block element */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .certification {
+        width: 95% !important; /* Further reduce width */
+        padding: 30px 15px; /* Adjust padding for small screens */
+    }
+
+    .cert-img {
+        max-width: 100px !important; /* Make the image smaller */
+    }
+
+    .certification-text {
+        text-align: center !important;
+    }
+
+    .button1 {
+        width: 100% !important; /* Full width button */
+        padding: 15px 0 !important; /* Larger padding */
+        font-size: 20px !important; /* Increase font size */
+        margin: 0 auto; /* Center the button */
+        display: block; /* Ensure the button behaves as a block element */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .certification {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 40px 80px; /* Increase side padding for larger screens */
+        width: 80%;
+        height: auto;
+        margin: 40px auto;
+        justify-content: space-between; /* Maintain the row layout */
+    }
+
+    .cert-img {
+        max-width: 200px; /* Slightly increase the image width for larger screens */
+    }
+
+    .certification-text {
+        font-size: 18px; /* Make text a bit smaller */
+        max-width: 700px;
+        text-align: left;
+        gap: 15px;
+    }
+
+    .certification-text h3 {
+        font-size: 22px; /* Reduce heading font size */
+    }
+
+    .certification-text p {
+        font-size: 14px; /* Make paragraph text smaller */
+    }
+
+    .button1 {
+        width: auto; /* Maintain button width as it was before */
+        padding: 10px 40px; /* Adjust padding for larger buttons */
+        font-size: 14px; /* Decrease font size of button */
+        margin-top: 50px;
+    }
+}
 
 
    @media screen and (max-width: 768px) {
