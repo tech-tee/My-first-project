@@ -190,19 +190,19 @@
         padding: 12px 0 !important;
         font-size: 18px !important;
         margin-top: 20px !important;
-        margin: 0 auto; /* Center the button */
-        display: block; /* Make the button a block element */
+        margin: 0 auto; 
+        display: block; 
     }
 }
 
 @media screen and (max-width: 480px) {
     .certification {
-        width: 95% !important; /* Further reduce width */
-        padding: 30px 15px; /* Adjust padding for small screens */
+        width: 95% !important; 
+        padding: 30px 15px; 
     }
 
     .cert-img {
-        max-width: 100px !important; /* Make the image smaller */
+        max-width: 100px !important; 
     }
 
     .certification-text {
@@ -210,11 +210,11 @@
     }
 
     .button1 {
-        width: 100% !important; /* Full width button */
-        padding: 15px 0 !important; /* Larger padding */
-        font-size: 20px !important; /* Increase font size */
-        margin: 0 auto; /* Center the button */
-        display: block; /* Ensure the button behaves as a block element */
+        width: 100% !important; 
+        padding: 15px 0 !important; 
+        font-size: 20px !important; 
+        margin: 0 auto; 
+        display: block;
     }
 }
 
@@ -223,42 +223,123 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 40px 80px; /* Increase side padding for larger screens */
+        padding: 40px 80px; 
         width: 80%;
         height: auto;
         margin: 40px auto;
-        justify-content: space-between; /* Maintain the row layout */
+        justify-content: space-between; 
     }
 
     .cert-img {
-        max-width: 200px; /* Slightly increase the image width for larger screens */
+        max-width: 200px; 
     }
 
     .certification-text {
-        font-size: 18px; /* Make text a bit smaller */
+        font-size: 18px; 
         max-width: 700px;
         text-align: left;
         gap: 15px;
     }
 
     .certification-text h3 {
-        font-size: 22px; /* Reduce heading font size */
+        font-size: 22px; 
     }
 
     .certification-text p {
-        font-size: 14px; /* Make paragraph text smaller */
+        font-size: 14px; 
     }
 
     .button1 {
-        width: auto; /* Maintain button width as it was before */
-        padding: 10px 40px; /* Adjust padding for larger buttons */
-        font-size: 14px; /* Decrease font size of button */
+        width: auto; 
+        padding: 10px 40px; 
+        font-size: 14px; 
         margin-top: 50px;
     }
 }
 
+@media (max-width: 768px) {
+    .ind-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 
-   @media screen and (max-width: 768px) {
+    .ind-images .img1, .ind-images .img2, .ind-images .img3, 
+    .ind-images .img4, .ind-images .img5, .ind-images .img6, 
+    .ind-images .img7, .ind-images .img8, .ind-images .img9, 
+    .ind-images .img10 {
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ind-images img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .ind {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ind-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .ind-images .img1, .ind-images .img2, .ind-images .img3, 
+    .ind-images .img4, .ind-images .img5, .ind-images .img6, 
+    .ind-images .img7, .ind-images .img8, .ind-images .img9, 
+    .ind-images .img10 {
+        height: 150px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ind-images img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 8px;
+    }
+
+    .text {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .ind {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .prd-images {
         flex-direction: row; 
         gap: 20px;
@@ -292,55 +373,84 @@
     }
 }
 
-
-@media (max-width: 768px) {
-    .ind-images {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .ind-images .img1, .ind-images .img2, .ind-images .img3, 
-    .ind-images .img4, .ind-images .img5, .ind-images .img6, 
-    .ind-images .img7, .ind-images .img8, .ind-images .img9, 
-    .ind-images .img10 {
-        width: calc(50% - 20px);
-        height: 200px;
-    }
-
-    .ind-images img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .text {
-        text-align: center;
-        width: 100%;
-    }
-}
-
 @media (max-width: 480px) {
-    .ind-images {
+    .first-grp {
+        display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        margin-bottom: 20px;
+        margin-top: 40px;
     }
 
-    .ind-images .img1, .ind-images .img2, .ind-images .img3, 
-    .ind-images .img4, .ind-images .img5, .ind-images .img6, 
-    .ind-images .img7, .ind-images .img8, .ind-images .img9, 
-    .ind-images .img10 {
+    .grp1-img {
         width: 100%;
-        height: 120px;
+        order: -1;
+        margin-bottom: 10px;
     }
 
-    .ind-images img {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .text {
-        text-align: center;
+    .grp1-img img {
         width: 100%;
+        max-width: 480px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+
+    .grp1-txt {
+        background-color: transparent;
+        border-radius: 10px;
+        background-image: linear-gradient(180deg, #F9EDED 0%, #F8CCD7 100%);
+        width: 100%;
+        max-width: 450px;
+        padding: 10px;
+        text-align: left;
+        margin-left: 0;
+        margin-right: auto;
+        margin-top: -12px;
+    }
+
+    .grp1-txt h2 {
+        font-size: 22px;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 20px;
+    }
+
+    .grp1-txt p {
+        font-size: 13px;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0 0 8.5px;
+        line-height: 1.5;
+        color: #4B4F58;
+    }
+
+    .grp1-btn {
+        padding-top: 10px;
+        text-align: left;
+    }
+
+    .btn2 {
+        height: 40px;
+        width: 100%;
+        max-width: 160px;
+        font-size: 14px;
+        background-color: #000;
+        border-radius: 8px;
+        color: white;
+        border: none;
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+
+    .btn2 img {
+        max-width: 10px;
+        width: 100%;
+        height: auto;
+        padding-left: 10px;
     }
 }
+
 
 @media (max-width: 768px) {
     .body1 {
