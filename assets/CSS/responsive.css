@@ -606,3 +606,38 @@
           padding-left: 10px;
         }
 }
+
+@media screen and (max-width: 480px) {
+    .con-sec {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+        width: 440px;
+    }
+
+    .web-info, .c-ser, .quick-links, .locate-us {
+        width: 100%; 
+        margin: 0;
+        padding: 10px;
+        max-height: 300px;
+    }
+
+    .web-info img {
+        max-width: 300px; 
+        width: 100%;
+        height: auto;
+        filter: grayscale(100%) !important;
+        -webkit-filter: grayscale(100%) !important; 
+    }
+
+    .web-info p{
+        text-align: center;
+        width: 372px;
+        font-size: 15.504px;
+        line-height: 1.5rem;
+        padding-left: 30px;
+    }
+}
+
